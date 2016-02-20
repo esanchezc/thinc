@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160219 21:11:55.204" generator="Robot 3.0 (Python 2.7.9 on darwin)">
+<suite source="/Users/ramses/thinc_institute/github/thinc/robot/tests" id="s1" name="Tests">
+<suite source="/Users/ramses/thinc_institute/github/thinc/robot/tests/for_script.robot" id="s1-s1" name="For Script">
+<test id="s1-s1-t1" name="First For Loop Test Case">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20160219 21:11:55.281" level="INFO">Opening browser 'firefox' to base url 'http://www.amazon.com.mx'</msg>
+<status status="PASS" endtime="20160219 21:12:01.262" starttime="20160219 21:11:55.280"></status>
+</kw>
+<kw type="for" name="${term} IN [ @{SEARCH_TERMS} ]">
+<kw type="foritem" name="${term} = Marvel">
+<kw name="Search" library="search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${search_textfield}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:01.263" level="INFO">Typing text 'Marvel' into text field 'twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20160219 21:12:03.179" starttime="20160219 21:12:01.263"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${search_button}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:03.180" level="INFO">Clicking element 'css=.nav-input'.</msg>
+<status status="PASS" endtime="20160219 21:12:05.004" starttime="20160219 21:12:03.179"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${results_list}</arg>
+</arguments>
+<status status="PASS" endtime="20160219 21:12:05.345" starttime="20160219 21:12:05.004"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:05.345" starttime="20160219 21:12:01.263"></status>
+</kw>
+<kw name="Go Back" library="Selenium2Library">
+<doc>Simulates the user clicking the "back" button on their browser.</doc>
+<status status="PASS" endtime="20160219 21:12:05.362" starttime="20160219 21:12:05.345"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:05.362" starttime="20160219 21:12:01.262"></status>
+</kw>
+<kw type="foritem" name="${term} = DC Comics">
+<kw name="Search" library="search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${search_textfield}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:05.363" level="INFO">Typing text 'DC Comics' into text field 'twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20160219 21:12:06.040" starttime="20160219 21:12:05.363"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${search_button}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:06.041" level="INFO">Clicking element 'css=.nav-input'.</msg>
+<status status="PASS" endtime="20160219 21:12:06.076" starttime="20160219 21:12:06.041"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${results_list}</arg>
+</arguments>
+<status status="PASS" endtime="20160219 21:12:07.824" starttime="20160219 21:12:06.076"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:07.824" starttime="20160219 21:12:05.362"></status>
+</kw>
+<kw name="Go Back" library="Selenium2Library">
+<doc>Simulates the user clicking the "back" button on their browser.</doc>
+<status status="PASS" endtime="20160219 21:12:07.831" starttime="20160219 21:12:07.824"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:07.832" starttime="20160219 21:12:05.362"></status>
+</kw>
+<kw type="foritem" name="${term} = X Men">
+<kw name="Search" library="search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${search_textfield}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:07.832" level="INFO">Typing text 'X Men' into text field 'twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20160219 21:12:14.382" starttime="20160219 21:12:07.832"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${search_button}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:14.384" level="INFO">Clicking element 'css=.nav-input'.</msg>
+<status status="PASS" endtime="20160219 21:12:15.777" starttime="20160219 21:12:14.382"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${results_list}</arg>
+</arguments>
+<status status="PASS" endtime="20160219 21:12:16.122" starttime="20160219 21:12:15.777"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:16.123" starttime="20160219 21:12:07.832"></status>
+</kw>
+<kw name="Go Back" library="Selenium2Library">
+<doc>Simulates the user clicking the "back" button on their browser.</doc>
+<status status="PASS" endtime="20160219 21:12:16.129" starttime="20160219 21:12:16.123"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:16.129" starttime="20160219 21:12:07.832"></status>
+</kw>
+<kw type="foritem" name="${term} = Deadpool">
+<kw name="Search" library="search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${search_textfield}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:16.130" level="INFO">Typing text 'Deadpool' into text field 'twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20160219 21:12:18.394" starttime="20160219 21:12:16.130"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${search_button}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:18.395" level="INFO">Clicking element 'css=.nav-input'.</msg>
+<status status="PASS" endtime="20160219 21:12:18.853" starttime="20160219 21:12:18.395"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${results_list}</arg>
+</arguments>
+<status status="PASS" endtime="20160219 21:12:20.258" starttime="20160219 21:12:18.853"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:20.258" starttime="20160219 21:12:16.129"></status>
+</kw>
+<kw name="Go Back" library="Selenium2Library">
+<doc>Simulates the user clicking the "back" button on their browser.</doc>
+<status status="PASS" endtime="20160219 21:12:20.265" starttime="20160219 21:12:20.258"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:20.265" starttime="20160219 21:12:16.129"></status>
+</kw>
+<kw type="foritem" name="${term} = Batman">
+<kw name="Search" library="search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${search_textfield}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:20.266" level="INFO">Typing text 'Batman' into text field 'twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20160219 21:12:23.247" starttime="20160219 21:12:20.266"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${search_button}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:23.248" level="INFO">Clicking element 'css=.nav-input'.</msg>
+<status status="PASS" endtime="20160219 21:12:24.462" starttime="20160219 21:12:23.247"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${results_list}</arg>
+</arguments>
+<status status="PASS" endtime="20160219 21:12:24.806" starttime="20160219 21:12:24.463"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:24.806" starttime="20160219 21:12:20.266"></status>
+</kw>
+<kw name="Go Back" library="Selenium2Library">
+<doc>Simulates the user clicking the "back" button on their browser.</doc>
+<status status="PASS" endtime="20160219 21:12:24.817" starttime="20160219 21:12:24.807"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:24.817" starttime="20160219 21:12:20.266"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:24.817" starttime="20160219 21:12:01.262"></status>
+</kw>
+<kw type="teardown" name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20160219 21:12:28.237" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160219 21:12:28.238" starttime="20160219 21:12:24.817"></status>
+</kw>
+<doc>my first test case</doc>
+<tags>
+<tag>for_loop1</tag>
+</tags>
+<status status="PASS" endtime="20160219 21:12:28.238" critical="yes" starttime="20160219 21:11:55.280"></status>
+</test>
+<test id="s1-s1-t2" name="Second For Loop Test Case">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:28.239" level="INFO">Opening browser 'firefox' to base url 'http://www.amazon.com.mx'</msg>
+<status status="PASS" endtime="20160219 21:12:32.923" starttime="20160219 21:12:28.239"></status>
+</kw>
+<kw type="for" name="${term} IN [ @{SEARCH_TERMS} ]">
+<kw type="foritem" name="${term} = Marvel">
+<kw name="Search" library="search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${search_textfield}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:32.924" level="INFO">Typing text 'Marvel' into text field 'twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20160219 21:12:34.738" starttime="20160219 21:12:32.924"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${search_button}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:34.738" level="INFO">Clicking element 'css=.nav-input'.</msg>
+<status status="PASS" endtime="20160219 21:12:36.228" starttime="20160219 21:12:34.738"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${results_list}</arg>
+</arguments>
+<status status="PASS" endtime="20160219 21:12:36.561" starttime="20160219 21:12:36.228"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:36.561" starttime="20160219 21:12:32.923"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:36.561" starttime="20160219 21:12:32.923"></status>
+</kw>
+<kw type="foritem" name="${term} = DC Comics">
+<kw name="Search" library="search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${search_textfield}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:36.562" level="INFO">Typing text 'DC Comics' into text field 'twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20160219 21:12:36.647" starttime="20160219 21:12:36.562"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${search_button}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:36.648" level="INFO">Clicking element 'css=.nav-input'.</msg>
+<status status="PASS" endtime="20160219 21:12:37.069" starttime="20160219 21:12:36.648"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${results_list}</arg>
+</arguments>
+<status status="PASS" endtime="20160219 21:12:37.680" starttime="20160219 21:12:37.069"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:37.680" starttime="20160219 21:12:36.561"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:37.680" starttime="20160219 21:12:36.561"></status>
+</kw>
+<kw type="foritem" name="${term} = X Men">
+<kw name="Search" library="search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${search_textfield}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:37.681" level="INFO">Typing text 'X Men' into text field 'twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20160219 21:12:37.749" starttime="20160219 21:12:37.681"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${search_button}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:37.750" level="INFO">Clicking element 'css=.nav-input'.</msg>
+<status status="PASS" endtime="20160219 21:12:37.845" starttime="20160219 21:12:37.750"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${results_list}</arg>
+</arguments>
+<status status="PASS" endtime="20160219 21:12:38.376" starttime="20160219 21:12:37.846"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:38.377" starttime="20160219 21:12:37.680"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:38.377" starttime="20160219 21:12:37.680"></status>
+</kw>
+<kw type="foritem" name="${term} = Deadpool">
+<kw name="Search" library="search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${search_textfield}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:38.377" level="INFO">Typing text 'Deadpool' into text field 'twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20160219 21:12:38.451" starttime="20160219 21:12:38.377"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${search_button}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:38.452" level="INFO">Clicking element 'css=.nav-input'.</msg>
+<status status="PASS" endtime="20160219 21:12:38.569" starttime="20160219 21:12:38.451"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${results_list}</arg>
+</arguments>
+<status status="PASS" endtime="20160219 21:12:39.157" starttime="20160219 21:12:38.569"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:39.157" starttime="20160219 21:12:38.377"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:39.157" starttime="20160219 21:12:38.377"></status>
+</kw>
+<kw type="foritem" name="${term} = Batman">
+<kw name="Search" library="search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${search_textfield}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:39.158" level="INFO">Typing text 'Batman' into text field 'twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20160219 21:12:39.243" starttime="20160219 21:12:39.158"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${search_button}</arg>
+</arguments>
+<msg timestamp="20160219 21:12:39.243" level="INFO">Clicking element 'css=.nav-input'.</msg>
+<status status="PASS" endtime="20160219 21:12:39.345" starttime="20160219 21:12:39.243"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${results_list}</arg>
+</arguments>
+<status status="PASS" endtime="20160219 21:12:39.875" starttime="20160219 21:12:39.345"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:39.875" starttime="20160219 21:12:39.157"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:39.875" starttime="20160219 21:12:39.157"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:39.875" starttime="20160219 21:12:32.923"></status>
+</kw>
+<kw type="teardown" name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20160219 21:12:40.699" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160219 21:12:40.699" starttime="20160219 21:12:39.875"></status>
+</kw>
+<tags>
+<tag>for_loop2</tag>
+</tags>
+<status status="PASS" endtime="20160219 21:12:40.700" critical="yes" starttime="20160219 21:12:28.238"></status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20160219 21:12:40.852" starttime="20160219 21:12:40.700"></status>
+</kw>
+<status status="PASS" endtime="20160219 21:12:40.852" starttime="20160219 21:11:55.223"></status>
+</suite>
+<status status="PASS" endtime="20160219 21:12:40.854" starttime="20160219 21:11:55.207"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">for_loop1</stat>
+<stat fail="0" pass="1">for_loop2</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Tests" pass="2">Tests</stat>
+<stat fail="0" id="s1-s1" name="For Script" pass="2">Tests.For Script</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

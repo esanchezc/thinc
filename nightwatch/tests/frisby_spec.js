@@ -13,7 +13,7 @@ frisby.create('Get Ip address JSON')
     .expectStatus(200)
     .expectHeaderContains('content-type', 'application/json')
     .expectJSON({
-        "origin": "187.189.149.71"
+        "origin": "189.208.16.143"
     })
     .toss();
 

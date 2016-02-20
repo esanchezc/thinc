@@ -1,0 +1,1 @@
+SEARCH_TERMS = ["cuchara", "libro", "pelicula", "silla", "zapatos"]

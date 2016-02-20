@@ -1,0 +1,1 @@
+SEARCH_TERMS = ["Marvel", "DC Comics", "X Men", "Deadpool", "Batman"]

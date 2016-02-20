@@ -1,0 +1,18 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.For Script                                                              
+==============================================================================
+First For Loop Test Case :: my first test case                        | PASS |
+------------------------------------------------------------------------------
+Second For Loop Test Case                                             | PASS |
+------------------------------------------------------------------------------
+Tests.For Script                                                      | PASS |
+2 critical tests, 2 passed, 0 failed
+2 tests total, 2 passed, 0 failed
+==============================================================================
+Tests                                                                 | PASS |
+2 critical tests, 2 passed, 0 failed
+2 tests total, 2 passed, 0 failed
+==============================================================================
+Output:  /Users/ramses/thinc_institute/github/thinc/robot/pabot_results/Tests.For Script/output.xml
