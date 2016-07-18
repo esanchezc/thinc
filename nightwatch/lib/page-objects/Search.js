@@ -4,6 +4,7 @@
 module.exports = function(browser) {
     var timeout = browser.globals.elements_timeout;
     var css = {};
+    var xpath = {};
 
     css.searchTextField = '#twotabsearchtextbox';
     css.searchButton = '.nav-input';

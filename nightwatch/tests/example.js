@@ -12,3 +12,14 @@ module.exports = {
       .end();
   }
 };
+
+//Simple execution
+//nightwatch tests/example.js
+
+//Parallel execution
+//nightwatch tests/example.js -e default,chrome
+
+//Tags usage
+//nightwatch tests/example.js -e default,chrome -a example
+
+//Go to amazon.js

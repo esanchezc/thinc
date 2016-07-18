@@ -27,3 +27,6 @@ exports.command = function(cssSelector, callback) {
 
     return this;
 };
+
+
+//check the value of elements_timeout in globalsModule.js

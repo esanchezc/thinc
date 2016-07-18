@@ -8,7 +8,11 @@ module.exports = {
 	  .click('.nav-input')
       .waitForElementVisible('#s-results-list-atf', 1000)
 	  .click('#result_0 a.s-access-detail-page')
-	  .waitForElementVisible('.parseasinTitle', 5000)
+	  .waitForElementVisible('#productTitle', 5000)
       .end();
   }
 };
+
+//nightwatch tests/amazon.js
+//Notice the repetition of waitForElementVisible + click
+//Go to custom-commands
