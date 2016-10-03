@@ -6,6 +6,11 @@ Test Teardown    Run Keywords    capture page screenshot    close browser
 Suite Teardown    close all browsers
 Resource    ../utilities.robot
 Resource    ../page-objects/search.robot
+Resource    ../page-objects/navigation.robot
+Resource    ../page-objects/cellphones_store.robot
+Resource    ../page-objects/unblocked_cellphones_store.robot
+Resource    ../page-objects/PLP.robot
+Resource    ../page-objects/PDP.robot
 
 *** Test Cases ***
 My First Test
@@ -15,7 +20,13 @@ My First Test
 
 My Second Test
     [Tags]    amazon
-    Search    DC Comics
+    Open Cellphones Store Menu
+    Select Unblocked Cellphones
+    Select Huawei Phones
+    Select Third Result
+    Verify Product Is Available
+    Add To Cart
+    Verify One Product Is In Cart
 
 My Third Test
     [Tags]    web_elements
