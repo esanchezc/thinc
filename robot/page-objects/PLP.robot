@@ -1,10 +1,13 @@
 *** Settings ***
-Library  Selenium2Library
+Library     Selenium2Library
+Resource    ../utilities.robot
 
 *** Variables ***
-${THIRD_RESULT}     //div[@id='atfResults']/ul/li[@id='result_2']//a
+${NTH_RESULT}     //div[@id='atfResults']/ul/li[@id='result_%s']//a
 
 *** Keywords ***
-Select Third Result
-    wait until element is visible  ${THIRD_RESULT}
-    click element    ${THIRD_RESULT}
+Select Result In Position
+    [Arguments]  ${position}
+    ${nth_position_selector}=  Format Selector  ${NTH_RESULT}  ${position}
+    wait until element is visible  ${nth_position_selector}
+    click element    ${nth_position_selector}

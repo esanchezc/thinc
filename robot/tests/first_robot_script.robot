@@ -11,6 +11,7 @@ Resource    ../page-objects/cellphones_store.robot
 Resource    ../page-objects/unblocked_cellphones_store.robot
 Resource    ../page-objects/PLP.robot
 Resource    ../page-objects/PDP.robot
+Resource    ../assertions/checkout_assertions.robot
 
 *** Test Cases ***
 Amazon Test
@@ -18,7 +19,8 @@ Amazon Test
     Open Cellphones Store Menu
     Select Unblocked Cellphones
     Select Huawei Phones
-    Select Third Result
+    Select Result In Position  4
     Verify Product Is Available
     Add To Cart
-    Verify One Product Is In Cart
+    ${items_in_cart}=  Get Cart Items Count
+    Verify Items In Cart    ${items_in_cart}    1

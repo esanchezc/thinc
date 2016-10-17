@@ -7,5 +7,5 @@ ${HUAWEI_PHONES}    css=.bxc-grid__container > div:last-child > div:nth-child(2)
 
 *** Keywords ***
 Select Huawei Phones
-    Element Should Be Visible   //img[@alt='Celulares Desbloqueados']
+    wait until element is visible   ${UNBLOCKED_CELLPHONES_HEADER}
     click element  ${HUAWEI_PHONES}

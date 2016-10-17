@@ -9,5 +9,5 @@ ${UNBLOCKED_CELLPHONES_LINK}    //img[@alt='CelularesDesbloqueados']
 
 *** Keywords ***
 Select Unblocked Cellphones
-    Element Should Be Visible  ${STORE_HEADER}
+    wait until element is visible  ${STORE_HEADER}
     Click Element  ${UNBLOCKED_CELLPHONES_LINK}
