@@ -10,6 +10,4 @@ ${UNBLOCKED_CELLPHONES_LINK}    //img[@alt='CelularesDesbloqueados']
 *** Keywords ***
 Select Unblocked Cellphones
     Element Should Be Visible  ${STORE_HEADER}
-    #Wait Until Element Is Visible  ${STORE_HEADER}
-    #Sleep  60 sec
     Click Element  ${UNBLOCKED_CELLPHONES_LINK}

@@ -13,12 +13,7 @@ Resource    ../page-objects/PLP.robot
 Resource    ../page-objects/PDP.robot
 
 *** Test Cases ***
-My First Test
-    [Documentation]    my first test case
-    [Tags]    amazon
-    Search    Marvel
-
-My Second Test
+Amazon Test
     [Tags]    amazon
     Open Cellphones Store Menu
     Select Unblocked Cellphones
@@ -27,8 +22,3 @@ My Second Test
     Verify Product Is Available
     Add To Cart
     Verify One Product Is In Cart
-
-My Third Test
-    [Tags]    web_elements
-    @{search_results}=    Search And Get All Search Results    Marvel
-    Validate Each Test Result Has Price    @{search_results}

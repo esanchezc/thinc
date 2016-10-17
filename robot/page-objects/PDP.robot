@@ -3,6 +3,7 @@ Library  Selenium2Library
 
 *** Variables ***
 ${AVAILABLE_TEXT}   //div[@id='availability']/span
+${AVAILABLE_LABEL}   //div[@id='availability']/span[contains(text(), 'Disponible')]
 ${BTN_ADD_TO_CART}  //input[@id='add-to-cart-button']
 ${MINICART_ITEMS_COUNT}  //span[@id='nav-cart-count']
 
@@ -10,6 +11,7 @@ ${MINICART_ITEMS_COUNT}  //span[@id='nav-cart-count']
 Verify Product Is Available
     ${availability}=  get text  ${AVAILABLE_TEXT}
     should be equal as strings  ${availability}  Disponible.
+    element should be visible  ${AVAILABLE_LABEL}
 
 Add To Cart
     click element  ${BTN_ADD_TO_CART}
